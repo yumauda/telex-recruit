@@ -2,6 +2,7 @@
 node_modules
 .DS_Store
 .node-versions
+xd_files/
 
 # ビルド成果物（自動生成されるファイル）
 css/
