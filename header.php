@@ -47,15 +47,15 @@
         <meta property="og:site_name" content="テレックス関西" />
         <meta property="og:description" content="テレックス関西の採用情報ページです。" />
     <?php elseif (is_single()) : ?>
-        <title><?php the_title() ?>｜大倉山ファミリア矯正歯科（横浜市港北区）</title>
-        <meta name="description" content="横浜市港北区大倉山の、痛くない・目立たない矯正専門歯科。マウスピース矯正(インビザライン)なども子供から大人まで安心の定額制です。" />
-        <meta name="keywords" content="矯正歯科,港北区,大倉山" />
-        <meta property="og:title" content="<?php the_title() ?>｜大倉山ファミリア矯正歯科（横浜市港北区）" />
+        <title><?php the_title() ?>｜関西テレックス採用ページ</title>
+        <meta name="description" content="関西テレックスの採用情報ページです。" />
+        <meta name="keywords" content="テレックス関西,採用情報" />
+        <meta property="og:title" content="<?php the_title() ?>｜関西テレックス採用ページ" />
         <meta property="og:type" content="article">
-        <meta property="og:url" content="https://familiar-kyousei.com/adult">
+        <meta property="og:url" content="https://telex.co.jp/recruit/information">
         <meta property="og:image" content="<?php echo get_template_directory_uri() ?>/images/common/ogp.jpg" />
-        <meta property="og:site_name" content="大倉山ファミリア矯正歯科（横浜市港北区）" />
-        <meta property="og:description" content="横浜市大倉山の、痛くない・目立たない矯正専門歯科。マウスピース矯正(インビザラン)なども子供から大人まで安心の定額制です。" />
+        <meta property="og:site_name" content="関西テレックス採用ページ" />
+        <meta property="og:description" content="関西テレックスの採用情報ページです。" />
 
     <?php endif; ?>
     <meta name="twitter:card" content="summary_large_image">

@@ -421,3 +421,77 @@ function webp_is_displayable($result, $path)
 	return $result;
 }
 add_filter('file_is_displayable_image', 'webp_is_displayable', 10, 2);
+
+/**
+ * ACF Local JSON 保存先/読み込み先
+ */
+function telexr_acf_json_save_point($path)
+{
+	return get_stylesheet_directory() . '/acf-json';
+}
+add_filter('acf/settings/save_json', 'telexr_acf_json_save_point');
+
+function telexr_acf_json_load_point($paths)
+{
+	$paths[] = get_stylesheet_directory() . '/acf-json';
+	return $paths;
+}
+add_filter('acf/settings/load_json', 'telexr_acf_json_load_point');
+
+/**
+ * ACF がある場合は ACF、なければ post meta から値取得
+ */
+function telexr_get_custom_field($key, $post_id = null, $default = '')
+{
+	if ($post_id === null) {
+		$post_id = get_the_ID();
+	}
+
+	if (function_exists('get_field')) {
+		$value = get_field($key, $post_id);
+		if ($value !== null && $value !== false && $value !== '') {
+			return $value;
+		}
+	}
+
+	$meta = get_post_meta($post_id, $key, true);
+	if ($meta !== '') {
+		return $meta;
+	}
+
+	return $default;
+}
+
+/**
+ * 説明会（カスタム投稿タイプ）
+ */
+function telexr_register_post_type_recruit_event()
+{
+	register_post_type(
+		'recruit_event',
+		array(
+			'labels' => array(
+				'name' => __('説明会'),
+				'singular_name' => __('説明会'),
+				'add_new' => __('新規追加'),
+				'add_new_item' => __('説明会を追加'),
+				'edit_item' => __('説明会を編集'),
+				'new_item' => __('新しい説明会'),
+				'view_item' => __('説明会を表示'),
+				'search_items' => __('説明会を検索'),
+				'not_found' => __('説明会が見つかりませんでした'),
+			),
+			'public' => true,
+			'has_archive' => true,
+			'rewrite' => array(
+				'slug' => 'information',
+				'with_front' => false,
+			),
+			'menu_position' => 6,
+			'menu_icon' => 'dashicons-calendar-alt',
+			'show_in_rest' => true,
+			'supports' => array('title'),
+		)
+	);
+}
+add_action('init', 'telexr_register_post_type_recruit_event');

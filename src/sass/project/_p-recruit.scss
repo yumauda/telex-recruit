@@ -105,12 +105,12 @@
 }
 
 .p-recruit__line-text {
-  text-align: center;
   color: #000;
   font-weight: 600;
   font-size: rem(14);
   line-height: 1.7;
   @include mq(md) {
+    text-align: center;
     font-size: rem(24);
     line-height: rem(30);
   }
@@ -141,13 +141,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: rem(24);
+  gap: rem(16);
   position: relative;
   text-decoration: none;
   transition: 0.3s ease-in-out;
   height: rem(80);
   @include mq(md){
    width: rem(592); 
+   gap: rem(24);
    height: rem(106);
   }
 }
@@ -161,6 +162,7 @@
   color: $white;
   font-weight: 700;
   font-size: rem(22);
+  line-height: 1;
   letter-spacing: 0.02em;
   @include mq(md) {
     font-size: rem(46);
@@ -168,12 +170,11 @@
 }
 
 .p-recruit__line-icon {
-  width: rem(20);
-  display: inline-block;
+  width: rem(19);
 }
-.p-recruit__line-icon img {
+.p-recruit__line-icon img{
   width: 100%;
   height: auto;
   object-fit: cover;
-  object-position: center;
+  object-position: center center;
 }

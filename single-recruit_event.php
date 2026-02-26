@@ -6,7 +6,7 @@
     </div>
     <div class="p-recruit__mv-inner l-inner">
       <h1 class="p-recruit__title">テレックス関西<br>会社説明会</h1>
-      <p class="p-recruit__date">3/2(月)10:00~11:30</p>
+      <p class="p-recruit__date"><?php the_field('recruit_date_text'); ?></p>
     </div>
   </section>
 
@@ -34,11 +34,8 @@
   <section class="p-recruit__line">
     <div class="p-recruit__line-inner l-inner">
       <p class="p-recruit__line-text">
-        テレックス関西の説明会へのご参加ありがとうございます！<br class="u-desktop">
-        LIVE映像内のQRコードから、当社公式LINE(アカウント名：Arrow グループ)を友だち追加し<br class="u-desktop">
-        基本情報の回答をお願いいたします♪基本情報への回答がないと<span class="p-recruit__line-textEm">説明会後の選考予約へお進みいただけません！</span><br class="u-desktop">
-        すでにLINE友だちの方もQRコードの読みこみをお願いいたします＾＾<br><br>
-        ↓↓QRコードが反応しない方は以下をタップしてみてください↓↓
+       
+        <?php the_field('recruit_line_text'); ?>
       </p>
 
       <?php $recruit_line_url = get_post_meta(get_the_ID(), 'recruit_line_url', true); ?>

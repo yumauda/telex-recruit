@@ -1,0 +1,81 @@
+@use "../global" as *;
+
+.p-recruit-archive {
+  padding-top: rem(40);
+  padding-bottom: rem(80);
+  @include mq(md) {
+    padding-top: rem(80);
+    padding-bottom: rem(120);
+  }
+}
+
+.p-recruit-archive__title {
+  text-align: center;
+  color: #222;
+  font-weight: 700;
+  font-size: rem(22);
+  letter-spacing: 0.05em;
+  @include mq(md) {
+    font-size: rem(34);
+  }
+}
+
+.p-recruit-archive__lists {
+  margin-top: rem(28);
+  display: grid;
+  gap: rem(14);
+  @include mq(md) {
+    margin-top: rem(40);
+    gap: rem(20);
+  }
+}
+
+.p-recruit-archive__link {
+  display: block;
+  border: 1px solid rgba($color: #222, $alpha: 0.2);
+  border-radius: rem(12);
+  padding: rem(18) rem(16);
+  text-decoration: none;
+  transition: 0.2s ease-in-out;
+  background: #fff;
+  @include mq(md) {
+    padding: rem(22) rem(24);
+  }
+}
+
+.p-recruit-archive__link:hover {
+  border-color: rgba($color: #222, $alpha: 0.5);
+}
+
+.p-recruit-archive__date {
+  color: rgba($color: #222, $alpha: 0.75);
+  font-weight: 700;
+  font-size: rem(12);
+  letter-spacing: 0.05em;
+  @include mq(md) {
+    font-size: rem(16);
+  }
+}
+
+.p-recruit-archive__name {
+  margin-top: rem(6);
+  color: #222;
+  font-weight: 700;
+  font-size: rem(16);
+  letter-spacing: 0.03em;
+  line-height: 1.4;
+  @include mq(md) {
+    font-size: rem(22);
+  }
+}
+
+.p-recruit-archive__empty {
+  margin-top: rem(28);
+  text-align: center;
+  color: rgba($color: #222, $alpha: 0.75);
+  font-size: rem(14);
+  @include mq(md) {
+    font-size: rem(18);
+  }
+}
+

@@ -38,9 +38,9 @@
   align-items: center;
   justify-content: center;
   height: inherit;
-  width: rem(120);
+  width: rem(140);
   @include mq(md){
-    width: rem(180);
+    width: rem(280);
     
   }
 }
