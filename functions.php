@@ -482,9 +482,9 @@ function telexr_register_post_type_recruit_event()
 				'not_found' => __('説明会が見つかりませんでした'),
 			),
 			'public' => true,
-			'has_archive' => true,
+			'has_archive' => 'recruit/recruit_event',
 			'rewrite' => array(
-				'slug' => 'information',
+				'slug' => 'recruit/recruit_event',
 				'with_front' => false,
 			),
 			'menu_position' => 6,
